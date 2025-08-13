@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - TechVantage</title>
+    <link rel="stylesheet" href="styleServices.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .legal-content {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            line-height: 1.8;
+        }
+        .legal-content h2 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 0.5rem;
+        }
+        .legal-content h3 {
+            color: #333;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        .legal-content p {
+            margin-bottom: 1rem;
+            color: var(--gray-text);
+        }
+        .legal-content ul, .legal-content ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .legal-content li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-text);
+        }
+        .highlight-box {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+        }
+        .cookie-banner-demo {
+            background: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            position: relative;
+        }
+        .cookie-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .cookie-type {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+        .cookie-type h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .cookie-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .toggle-switch.active {
+            background: var(--primary-color);
+        }
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .toggle-switch.active::after {
+            transform: translateX(30px);
+        }
+        .browser-guide {
+            background: #e8f4fd;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        .browser-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .browser-item {
+            background: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .last-updated {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        .cookie-table th,
+        .cookie-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .cookie-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        .cookie-table tr:hover {
+            background: var(--light-bg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html">TechVantage</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cookie Policy Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cookie Policy</h1>
+                <p>How we use cookies and tracking technologies on our website</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Policy Content -->
+    <section class="services-content">
+        <div class="container">
+            <div class="last-updated">
+                <i class="fas fa-cookie-bite"></i> Last Updated: December 2024
+            </div>
+
+            <div class="legal-content">
+                <h2>1. What Are Cookies?</h2>
+                <p>
+                    Cookies are small text files that are stored on your device (computer, smartphone, or tablet) when you visit websites. They help websites remember information about your visit, such as your preferences and actions, making your browsing experience more efficient and personalized.
+                </p>
+                
+                <div class="highlight-box">
+                    <strong><i class="fas fa-info-circle"></i> Quick Definition:</strong> Think of cookies as digital sticky notes that websites place on your device to remember useful information about your preferences and behavior.
+                </div>
+
+                <h2>2. How TechVantage Uses Cookies</h2>
+                <p>
+                    We use cookies and similar tracking technologies to enhance your experience on our website, analyze usage patterns, and improve our AI-powered services. This policy explains what cookies we use, why we use them, and how you can control them.
+                </p>
+
+                <h3>2.1 Our Cookie Philosophy</h3>
+                <ul>
+                    <li><strong>Transparency:</strong> We clearly explain what cookies we use and why</li>
+                    <li><strong>Control:</strong> You have the choice to accept or decline non-essential cookies</li>
+                    <li><strong>Minimal Data:</strong> We only collect what's necessary for functionality and improvement</li>
+                    <li><strong>Security:</strong> All cookie data is processed securely and protected</li>
+                </ul>
+
+                <h2>3. Types of Cookies We Use</h2>
+                
+                <div class="cookie-types">
+                    <div class="cookie-type">
+                        <h4><i class="fas fa-cog"></i> Essential Cookies</h4>
+                        <p><strong>Always Active</strong></p>
+                        <p>These cookies are necessary for our website to function properly and cannot be disabled.</p>
+                        <ul>
+                            <li>Session management</li>
+                            <li>Security authentication</li>
+                            <li>Form submission handling</li>
+                            <li>Basic website functionality</li>
+                        </ul>
+                        <p><em>Duration:</em> Session-based (deleted when you close browser)</p>
+                    </div>
+                    
+                    <div class="cookie-type">
+                        <h4><i class="fas fa-chart-line"></i> Analytics Cookies</h4>
+                        <p><strong>Can be Disabled</strong></p>
+                        <p>Help us understand how visitors interact with our website to improve user experience.</p>
+                        <ul>
+                            <li>Page views and traffic analysis</li>
+                            <li>User journey tracking</li>
+                            <li>Performance monitoring</li>
+                            <li>Error tracking and debugging</li>
+                        </ul>
+                        <p><em>Duration:</em> 2 years maximum</p>
+                    </div>
+                    
+                    <div class="cookie-type">
+                        <h4><i class="fas fa-user"></i> Functional Cookies</h4>
+                        <p><strong>Can be Disabled</strong></p>
+                        <p>Remember your preferences and settings to provide a personalized experience.</p>
+                        <ul>
+                            <li>Language preferences</li>
+                            <li>Theme and display settings</li>
+                            <li>Contact form information</li>
+                            <li>Service preferences</li>
+                        </ul>
+                        <p><em>Duration:</em> 1 year maximum</p>
+                    </div>
+                    
+                    <div class="cookie-type">
+                        <h4><i class="fas fa-bullhorn"></i> Marketing Cookies</h4>
+                        <p><strong>Can be Disabled</strong></p>
+                        <p>Used to deliver relevant advertisements and measure campaign effectiveness.</p>
+                        <ul>
+                            <li>Ad personalization</li>
+                            <li>Campaign tracking</li>
+                            <li>Social media integration</li>
+                            <li>Remarketing activities</li>
+                        </ul>
+                        <p><em>Duration:</em> 13 months maximum</p>
+                    </div>
+                </div>
+
+                <h2>4. Cookie Consent Management</h2>
+                
+                <div class="cookie-banner-demo">
+                    <h3><i class="fas fa-cookie-bite"></i> Cookie Consent Banner (Example)</h3>
+                    <p>We use cookies to enhance your experience and improve our services. You can choose which types of cookies to accept:</p>
+                    <div style="margin-top: 1rem;">
+                        <button style="background: var(--primary-color); color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; margin-right: 0.5rem;">Accept All</button>
+                        <button style="background: transparent; color: white; padding: 0.5rem 1rem; border: 1px solid white; border-radius: 5px; margin-right: 0.5rem;">Customize Settings</button>
+                        <button style="background: transparent; color: white; padding: 0.5rem 1rem; border: 1px solid white; border-radius: 5px;">Decline Non-Essential</button>
+                    </div>
+                </div>
+
+                <h3>4.1 Cookie Preference Center</h3>
+                <p>You can customize your cookie preferences using our preference center:</p>
+
+                <div class="cookie-toggle">
+                    <div>
+                        <strong>Essential Cookies</strong>
+                        <p>Required for website functionality</p>
+                    </div>
+                    <div class="toggle-switch active"></div>
+                </div>
+
+                <div class="cookie-toggle">
+                    <div>
+                        <strong>Analytics Cookies</strong>
+                        <p>Help us improve website performance</p>
+                    </div>
+                    <div class="toggle-switch"></div>
+                </div>
+
+                <div class="cookie-toggle">
+                    <div>
+                        <strong>Functional Cookies</strong>
+                        <p>Remember your preferences</p>
+                    </div>
+                    <div class="toggle-switch"></div>
+                </div>
+
+                <div class="cookie-toggle">
+                    <div>
+                        <strong>Marketing Cookies</strong>
+                        <p>Deliver relevant advertisements</p>
+                    </div>
+                    <div class="toggle-switch"></div>
+                </div>
+
+                <h2>5. Detailed Cookie Information</h2>
+                
+                <div class="table-container">
+                    <table class="cookie-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Name</th>
+                                <th>Purpose</th>
+                                <th>Type</th>
+                                <th>Duration</th>
+                                <th>Provider</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PHPSESSID</td>
+                                <td>Session management and user authentication</td>
+                                <td>Essential</td>
+                                <td>Session</td>
+                                <td>TechVantage</td>
+                            </tr>
+                            <tr>
+                                <td>csrf_token</td>
+                                <td>Cross-site request forgery protection</td>
+                                <td>Essential</td>
+                                <td>Session</td>
+                                <td>TechVantage</td>
+                            </tr>
+                            <tr>
+                                <td>user_preferences</td>
+                                <td>Remember user settings and preferences</td>
+                                <td>Functional</td>
+                                <td>1 year</td>
+                                <td>TechVantage</td>
+                            </tr>
+                            <tr>
+                                <td>_ga</td>
+                                <td>Google Analytics tracking</td>
+                                <td>Analytics</td>
+                                <td>2 years</td>
+                                <td>Google</td>
+                            </tr>
+                            <tr>
+                                <td>_gid</td>
+                                <td>Google Analytics session tracking</td>
+                                <td>Analytics</td>
+                                <td>24 hours</td>
+                                <td>Google</td>
+                            </tr>
+                            <tr>
+                                <td>_fbp</td>
+                                <td>Facebook pixel tracking</td>
+                                <td>Marketing</td>
+                                <td>3 months</td>
+                                <td>Facebook</td>
+                            </tr>
+                            <tr>
+                                <td>contact_form_data</td>
+                                <td>Save form data temporarily</td>
+                                <td>Functional</td>
+                                <td>30 minutes</td>
+                                <td>TechVantage</td>
+                            </tr>
+                            <tr>
+                                <td>cookie_consent</td>
+                                <td>Remember your cookie preferences</td>
+                                <td>Essential</td>
+                                <td>1 year</td>
+                                <td>TechVantage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>6. Third-Party Cookies</h2>
+                
+                <h3>6.1 Third-Party Services We Use</h3>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Website traffic analysis and user behavior insights</li>
+                    <li><strong>Google Ads:</strong> Advertisement delivery and conversion tracking</li>
+                    <li><strong>Facebook Pixel:</strong> Social media marketing and retargeting</li>
+                    <li><strong>LinkedIn Insight:</strong> Professional network marketing analytics</li>
+                    <li><strong>YouTube:</strong> Video content embedding and analytics</li>
+                    <li><strong>Calendly:</strong> Meeting scheduling integration</li>
+                </ul>
+
+                <h3>6.2 Third-Party Cookie Policies</h3>
+                <p>For detailed information about third-party cookies, please refer to their respective privacy policies:</p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                    <li><a href="https://www.facebook.com/privacy/policy" target="_blank">Facebook Privacy Policy</a></li>
+                    <li><a href="https://www.linkedin.com/legal/privacy-policy" target="_blank">LinkedIn Privacy Policy</a></li>
+                    <li><a href="https://calendly.com/privacy" target="_blank">Calendly Privacy Policy</a></li>
+                </ul>
+
+                <h2>7. AI and Machine Learning Cookies</h2>
+                
+                <h3>7.1 AI-Specific Tracking</h3>
+                <p>As an AI solutions provider, we use specialized cookies for:</p>
+                <ul>
+                    <li><strong>Chatbot Interactions:</strong> Remember conversation context and preferences</li>
+                    <li><strong>AI Recommendations:</strong> Personalize service suggestions based on your interests</li>
+                    <li><strong>User Journey Analysis:</strong> Understand how visitors interact with AI features</li>
+                    <li><strong>A/B Testing:</strong> Test different AI implementations for better user experience</li>
+                </ul>
+
+                <h3>7.2 Machine Learning Data</h3>
+                <div class="highlight-box">
+                    <strong>Important:</strong> All data collected through cookies for AI/ML purposes is anonymized and aggregated. We do not use personally identifiable information for AI training without explicit consent.
+                </div>
+
+                <h2>8. How to Manage Cookies</h2>
+                
+                <h3>8.1 Browser Settings</h3>
+                <p>You can control cookies through your browser settings. Here's how to manage cookies in popular browsers:</p>
+
+                <div class="browser-guide">
+                    <h4>Browser-Specific Instructions:</h4>
+                    <div class="browser-list">
+                        <div class="browser-item">
+                            <i class="fab fa-chrome" style="font-size: 2rem; color: #4285f4; margin-bottom: 0.5rem;"></i>
+                            <h5>Google Chrome</h5>
+                            <p>Settings → Privacy and Security → Cookies and other site data</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-firefox" style="font-size: 2rem; color: #ff9500; margin-bottom: 0.5rem;"></i>
+                            <h5>Mozilla Firefox</h5>
+                            <p>Options → Privacy & Security → Cookies and Site Data</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-safari" style="font-size: 2rem; color: #007acc; margin-bottom: 0.5rem;"></i>
+                            <h5>Safari</h5>
+                            <p>Preferences → Privacy → Manage Website Data</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-edge" style="font-size: 2rem; color: #0078d4; margin-bottom: 0.5rem;"></i>
+                            <h5>Microsoft Edge</h5>
+                            <p>Settings → Site permissions → Cookies and site data</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>8.2 Our Cookie Settings</h3>
+                <p>You can also manage your cookie preferences directly on our website:</p>
+                <ul>
+                    <li>Click the "Cookie Settings" link in our website footer</li>
+                    <li>Use the cookie banner that appears on your first visit</li>
+                    <li>Contact us at privacy@techvantage.in for assistance</li>
+                    <li>Clear your browser cookies to reset all preferences</li>
+                </ul>
+
+                <h3>8.3 Impact of Disabling Cookies</h3>
+                <p>Disabling certain types of cookies may affect your experience:</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Website may not function properly</li>
+                    <li><strong>Functional Cookies:</strong> Loss of personalized settings and preferences</li>
+                    <li><strong>Analytics Cookies:</strong> We can't improve our services based on usage data</li>
+                    <li><strong>Marketing Cookies:</strong> Less relevant advertisements and offers</li>
+                </ul>
+
+                <h2>9. Mobile App Tracking</h2>
+                
+                <h3>9.1 Mobile Tracking Technologies</h3>
+                <p>If you use our mobile applications, we may use similar tracking technologies:</p>
+                <ul>
+                    <li><strong>Device Identifiers:</strong> IDFA (iOS) and GAID (Android) for analytics</li>
+                    <li><strong>App Usage Analytics:</strong> Feature usage and crash reporting</li>
+                    <li><strong>Push Notification Tokens:</strong> For relevant service updates</li>
+                    <li><strong>Local Storage:</strong> App preferences and cached data</li>
+                </ul>
+
+                <h3>9.2 Mobile Privacy Controls</h3>
+                <ul>
+                    <li><strong>iOS:</strong> Settings → Privacy & Security → Tracking</li>
+                    <li><strong>Android:</strong> Settings → Privacy → Ads → Reset advertising ID</li>
+                    <li><strong>App Settings:</strong> Privacy controls within our mobile apps</li>
+                </ul>
+
+                <h2>10. Data Retention and Deletion</h2>
+                
+                <h3>10.1 Cookie Data Retention</h3>
+                <ul>
+                    <li><strong>Session Cookies:</strong> Deleted when you close your browser</li>
+                    <li><strong>Persistent Cookies:</strong> Stored for the duration specified in cookie settings</li>
+                    <li><strong>Analytics Data:</strong> Retained for up to 26 months (Google Analytics standard)</li>
+                    <li><strong>Marketing Data:</strong> Deleted after 13 months or when you opt out</li>
+                </ul>
+
+                <h3>10.2 How to Delete Cookies</h3>
+                <ol>
+                    <li><strong>Clear Browser Data:</strong> Delete all cookies from your browser settings</li>
+                    <li><strong>Selective Deletion:</strong> Remove specific cookies from individual websites</li>
+                    <li><strong>Automatic Deletion:</strong> Set browser to delete cookies on exit</li>
+                    <li><strong>Contact Us:</strong> Request deletion of server-side cookie data</li>
+                </ol>
+
+                <h2>11. International Data Transfers</h2>
+                <p>
+                    Some of our third-party cookie providers may transfer your data internationally. We ensure appropriate safeguards are in place:
+                </p>
+                <ul>
+                    <li>Standard Contractual Clauses with international providers</li>
+                    <li>Adequacy decisions for data transfers to approved countries</li>
+                    <li>Privacy Shield framework compliance (where applicable)</li>
+                    <li>Regular review of international transfer mechanisms</li>
+                </ul>
+
+                <h2>12. Children's Privacy</h2>
+                <p>
+                    Our website and services are not directed at children under 13 years of age. We do not knowingly collect personal information from children through cookies or any other means. If you believe we have collected information from a child, please contact us immediately.
+                </p>
+
+                <h2>13. Updates to This Cookie Policy</h2>
+                
+                <h3>13.1 Policy Changes</h3>
+                <p>We may update this Cookie Policy to reflect:</p>
+                <ul>
+                    <li>Changes in our cookie usage practices</li>
+                    <li>New features or services that require tracking</li>
+                    <li>Legal or regulatory requirements</li>
+                    <li>Improvements in data protection standards</li>
+                </ul>
+
+                <h3>13.2 Notification of Changes</h3>
+                <ul>
+                    <li>Updated policy posted on our website</li>
+                    <li>Email notification for significant changes</li>
+                    <li>Cookie banner update for new consent requirements</li>
+                    <li>30-day notice period for material changes</li>
+                </ul>
+
+                <h2>14. Contact Information</h2>
+                
+                <div class="contact-info">
+                    <h3><i class="fas fa-cookie-bite"></i> Cookie Policy Questions</h3>
+                    <p>
+                        For questions about our use of cookies or to exercise your cookie preferences:
+                    </p>
+                    <p>
+                        <strong>Privacy Team</strong><br>
+                        Email: privacy@techvantage.in<br>
+                        Phone: +91 7727072301<br>
+                        Address: TechVantage Privacy Office<br>
+                        Malviya Nagar, Jaipur, Rajasthan - 302017
+                    </p>
+                    <p>
+                        <strong>Cookie Settings:</strong> Available in our website footer or contact us directly
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Your Choice Matters:</strong> We respect your privacy choices. You have full control over non-essential cookies and can change your preferences at any time through your browser settings or our cookie preference center.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechVantage</h3>
+                    <p>Empowering Jaipur businesses with cutting-edge AI and technology solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="data-protection.html">Data Protection</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Malviya Nagar, Jaipur</li>
+                        <li>+91 7727072301</li>
+                        <li>hello@techvantage.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechVantage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Cookie toggle functionality
+        document.querySelectorAll('.toggle-switch').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
