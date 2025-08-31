@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div style="text-align: center; padding: 2rem; color: var(--gray-text);">
                     <h3>Unable to load contact form</h3>
                     <p>Please contact us directly at:</p>
-                    <p><strong>Email:</strong> hello@techvantage.in</p>
+                    <p><strong>Email:</strong> hello@VAYU.in</p>
                     <p><strong>Phone:</strong> +91 98290 12345</p>
                 </div>
             `;
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function initializeWidgets() {
         // Initialize any additional widgets or plugins
-        console.log('TechVantage website loaded successfully!');
+        console.log('VAYU website loaded successfully!');
     }
 
     // Add loading animation
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Global functions that might be needed
-window.TechVantage = {
+window.VAYU = {
     showNotification: function(message, type = 'info') {
         // Create and show notification
         const notification = document.createElement('div');
